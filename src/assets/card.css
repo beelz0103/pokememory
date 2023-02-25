@@ -1,0 +1,46 @@
+.card {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: transform 0.2s;
+  margin: 5px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card > img {
+  height: 150px;
+  width: auto;
+}
+
+.card > div {
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background-color: lightyellow;
+  border-radius: 5px;
+}
+
+.card > * {
+  pointer-events: none;
+}
+
+/* .card {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */

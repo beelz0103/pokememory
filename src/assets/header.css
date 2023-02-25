@@ -1,0 +1,32 @@
+.header {
+  height: 100px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.title {
+  font-family: "pokemon";
+  font-size: 32px;
+  color: yellow;
+  text-shadow: -2px 0 blue, 0 2px blue, 1px 0 blue, 0 -1px blue;
+}
+
+.score-board {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.score-board > div {
+  display: flex;
+  gap: 5px;
+}
+
+.score-board > div > div:nth-child(1) {
+  text-align: right;
+  width: 200px;
+}
