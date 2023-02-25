@@ -1,63 +1,54 @@
 * {
   box-sizing: border-box;
   margin: 0;
-}
-
-@font-face {
-  font-family: "pokemon";
-  src: url(./assets/pokemonfont/Pokemon\ Solid.ttf);
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-body {
-  margin: 0;
   padding: 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
+@font-face {
+  font-family: "pokemon-solid";
+  src: url(./assets/pokemonfont/Pokemon\ Solid.ttf);
+}
+
+@font-face {
+  font-family: "pokemon-hollow";
+  src: url(./assets/pokemonfont/Pokemon\ Hollow.ttf);
 }
 
 .board {
-  flex: 1;
   background-color: lightgrey;
-}
 
-.card > * {
-  pointer-events: none;
-}
-
-.cardContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
-  height: 500px;
-}
-
-.cardContainer > div {
-  display: flex;
-}
-
-img {
-  height: 100px;
-  width: auto;
-}
-
-.card-card {
-  height: 150px;
   position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.level-display {
+  margin-top: 5px;
+  font-family: "pokemon-solid";
+  font-size: 24px;
+}
+
+.card-sub-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .gameover {
@@ -74,7 +65,7 @@ img {
 }
 
 .loader {
-  background-color: white;
+  background-color: #dc211e;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -87,10 +78,41 @@ img {
 
 .loader > img {
   position: fixed;
-  height: 100%;
+  height: 40%;
   width: auto;
+}
+
+.pokemon-card {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin: 5px;
+  border: 3px solid rgb(43, 56, 41);
+  background-color: #0a476d;
+  box-shadow: rgb(88 88 88) 0px 1px 4px;
+  transition: all 200ms ease 0s;
+  cursor: pointer;
+}
+
+.pokemon-card:hover {
+  transition: all 200ms ease 0s;
+  transform: scale(1.02);
 }
 
 .pokemon-card > * {
   pointer-events: none;
+}
+
+.pokemon-card > img {
+  height: 175px;
+  width: auto;
+}
+
+.pokemon-card > div {
+  font-family: "pokemon-solid";
+  color: white;
+  margin-bottom: 3px;
 }

@@ -10,11 +10,13 @@ function CardContainer({
   showLoader,
 }) {
   const [cards, setCards] = useState(null);
+  const [showCards, setShowCards] = useState(false);
 
   const startLevel = async (quantity) => {
     const cardList = await getPokemonList(quantity);
     setCards(cardList);
     setTimeout(() => {
+      setShowCards(true);
       showLoader(false);
     }, 1000);
   };
@@ -36,28 +38,36 @@ function CardContainer({
 
     if (!clickedCard.clicked) {
       incrementScore();
-      setCards(shuffleCards(newCardList));
       if (levelCleared) {
+        setShowCards(false);
         incrementLevel();
       } else {
+        setCards(shuffleCards(newCardList));
       }
     } else {
       onGameOver();
     }
   };
 
+  const cardSubContainer = showCards && (
+    <div className="card-sub-container">
+      {cards.map((value) => {
+        return (
+          <Card
+            key={value.id}
+            pokemonData={value}
+            handleClick={cardClickHandler}
+          />
+        );
+      })}
+    </div>
+  );
+
   return (
     cards && (
-      <div className="cardContainer">
-        {cards.map((value) => {
-          return (
-            <Card
-              key={value.id}
-              pokemonData={value}
-              handleClick={cardClickHandler}
-            />
-          );
-        })}
+      <div className="card-container">
+        <div className="level-display">Level: {levelData.lvlNumber}</div>
+        {cardSubContainer}
       </div>
     )
   );

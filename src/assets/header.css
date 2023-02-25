@@ -1,6 +1,6 @@
 .header {
   height: 100px;
-  background-color: white;
+  background-color: #000000bd;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -9,13 +9,14 @@
 }
 
 .title {
-  font-family: "pokemon";
+  font-family: "pokemon-solid";
+  color: white;
   font-size: 32px;
-  color: yellow;
-  text-shadow: -2px 0 blue, 0 2px blue, 1px 0 blue, 0 -1px blue;
 }
 
 .score-board {
+  font-family: "pokemon-hollow";
+  color: white;
   width: 250px;
   font-size: 20px;
   font-weight: bold;

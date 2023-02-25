@@ -20,7 +20,10 @@ function Board() {
   const incrementLevel = () => {
     const nextLevel = {
       lvlNumber: currentLevel.lvlNumber + 1,
-      cardQty: currentLevel.cardQty + 2,
+      cardQty:
+        currentLevel.cardQty === 14
+          ? currentLevel.cardQty
+          : currentLevel.cardQty + 2,
     };
     setIsLoading(true);
     setCurrentLevel(nextLevel);
