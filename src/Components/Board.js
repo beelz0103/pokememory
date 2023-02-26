@@ -64,7 +64,11 @@ function Board() {
   return (
     <div className="board">
       <Loader show={isLoading} />
-      <GameOver restartGame={restartGame} show={isGameOver} />
+      <GameOver
+        restartGame={restartGame}
+        show={isGameOver}
+        score={scoreData.currentScore}
+      />
       <Header
         currentScore={scoreData.currentScore}
         highestScore={scoreData.highestScore}

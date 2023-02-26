@@ -116,3 +116,27 @@
   color: white;
   margin-bottom: 3px;
 }
+
+.gameover {
+  font-family: "pokemon-solid";
+  font-size: 50px;
+}
+
+.gameover > button {
+  margin-top: 20px;
+  padding: 5px 12px;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms ease 0s;
+}
+
+.gameover-score {
+  font-family: "pokemon-solid";
+  font-size: 24px;
+}
+
+.gameover > button:hover {
+  transform: scale(1.01);
+}

@@ -1,9 +1,10 @@
-function GameOver({ restartGame, show }) {
+function GameOver({ restartGame, show, score }) {
   return (
     show && (
       <div className="gameover">
-        <h1>Game Over</h1>
-        <button onClick={restartGame}>Replay</button>
+        <div>Game Over</div>
+        <div className="gameover-score">Score: {score}</div>
+        <button onClick={restartGame}>Play Again</button>
       </div>
     )
   );

@@ -45,6 +45,7 @@ function CardContainer({
         setCards(shuffleCards(newCardList));
       }
     } else {
+      setShowCards(false);
       onGameOver();
     }
   };
