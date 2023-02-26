@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pokememory/static/css/main.20293b75.css",
-    "main.js": "/pokememory/static/js/main.d6fffd36.js",
+    "main.css": "/pokememory/static/css/main.35f9aec7.css",
+    "main.js": "/pokememory/static/js/main.090bff89.js",
     "static/media/poke.gif": "/pokememory/static/media/poke.995553c1bdecd01de0e5.gif",
     "static/media/Pokemon Hollow.ttf": "/pokememory/static/media/Pokemon Hollow.47f77ce9939c5330492b.ttf",
     "static/media/Pokemon Solid.ttf": "/pokememory/static/media/Pokemon Solid.5d60be1f7ff5fcc21fc1.ttf",
     "index.html": "/pokememory/index.html",
-    "main.20293b75.css.map": "/pokememory/static/css/main.20293b75.css.map",
-    "main.d6fffd36.js.map": "/pokememory/static/js/main.d6fffd36.js.map"
+    "main.35f9aec7.css.map": "/pokememory/static/css/main.35f9aec7.css.map",
+    "main.090bff89.js.map": "/pokememory/static/js/main.090bff89.js.map"
   },
   "entrypoints": [
-    "static/css/main.20293b75.css",
-    "static/js/main.d6fffd36.js"
+    "static/css/main.35f9aec7.css",
+    "static/js/main.090bff89.js"
   ]
 }
